@@ -5,9 +5,9 @@ local tweenService = game:GetService("TweenService");
 
 local roomsFolder = workspace["Rooms"];
 
-local PlayersModule = loadstring(HttpService:GetAsync("https://raw.githubusercontent.com/RoofashV2/noors/main/noors/Modules/Players.lua"))();
-local gameSettings = loadstring(HttpService:GetAsync("https://raw.githubusercontent.com/RoofashV2/noors/main/noors/Modules/GameSettings.lua"))();
-local RoomData = loadstring(HttpService:GetAsync("https://raw.githubusercontent.com/RoofashV2/noors/main/noors/Modules/RoomData.lua"))();
+local PlayersModule = loadstring(HttpService:GetAsync("https://raw.githubusercontent.com/RawfishTastesVeryGood/noors/main/Modules/Players.lua"))();
+local gameSettings = loadstring(HttpService:GetAsync("https://raw.githubusercontent.com/RawfishTastesVeryGood/noors/main/Modules/GameSettings.lua"))();
+local RoomData = loadstring(HttpService:GetAsync("https://raw.githubusercontent.com/RawfishTastesVeryGood/noors/main/Modules/RoomData.lua"))();
 
 local filtered = false;
 local roomDestruction = true;
@@ -22,7 +22,7 @@ local reversedDirection = false;
 local distanceTypes = PlayersModule.distanceTypes;
 
 function getRoom(roomName)
-	local url = "https://raw.githubusercontent.com/RoofashV2/noors/main/noors/Modules/Rooms/" .. roomName .. ".lua"
+	local url = "https://raw.githubusercontent.com/RawfishTastesVeryGood/noors/main/Modules/Rooms/" .. roomName .. ".lua"
 	local func = loadstring(HttpService:GetAsync(url))()
 	local room = func()
 	local nodes = room:FindFirstChild("Nodes")
